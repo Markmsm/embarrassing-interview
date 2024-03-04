@@ -7,13 +7,26 @@ import static org.junit.jupiter.api.Assertions.*;
 class WordCheckerTest {
 
     @Test
-    void wordCheckerShouldRemoveDuplicityOfSanduicheWord() {
+    void wordCheckerShouldRemoveDuplicityInSanduicheWord() {
         // Given:
-        String sanduiche = "sanduicheiche";
-        String expectedResult = "sanduiche";
+        final String sanduiche = "sanduicheiche";
+        final String expectedResult = "sanduiche";
 
         // When:
-        String result = WordChecker.checkWord(sanduiche);
+        final String result = WordChecker.checkWord(sanduiche);
+
+        // Then:
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    void wordCheckerShouldRemoveDuplicityInBarrilWord() {
+        // Given:
+        final String sanduiche = "barrilarril";
+        final String expectedResult = "barril";
+
+        // When:
+        final String result = WordChecker.checkWord(sanduiche);
 
         // Then:
         assertEquals(expectedResult, result);
