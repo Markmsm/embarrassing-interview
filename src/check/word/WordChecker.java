@@ -9,11 +9,15 @@ public class WordChecker {
             final String wordInitToCompare = substringToCompare.substring(0, (substringToCompare.length() / 2));
             final String wordEndToCompare = substringToCompare.substring(substringToCompare.length() / 2);
 
-            if (wordInitToCompare.compareTo(wordEndToCompare) == 0) {
+            if (isTwoStringsEqual(wordInitToCompare, wordEndToCompare)) {
                 return word.substring(0, (word.length() - wordEndToCompare.length()));
             }
         }
 
         return word;
+    }
+
+    private static boolean isTwoStringsEqual(String a, String b) {
+        return a.compareTo(b) == 0;
     }
 }
